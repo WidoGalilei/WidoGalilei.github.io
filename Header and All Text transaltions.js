@@ -98,7 +98,7 @@
             // MiniMap Section
                 
                 mapH3.textContent = 'Como encontrarnos';
-                mapText.textContent = 'Nos encontramos FB tan solo FB 3 minutos de Mojacar Pueblo (dirección Turre) y FB tan solo 6 minutos de Mojacar Playa'
+                mapText.textContent = 'Nos encontramos tan solo 3 minutos de Mojacar Pueblo (dirección Turre) y tan solo 6 minutos de Mojacar Playa'
 
             // Reservation Button
 
