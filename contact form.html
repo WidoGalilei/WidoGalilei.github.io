@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onSubmit={formSubmit} className="mainFormContainer">
+
+        <div>
+            <label htmlFor="name">{labelName}</label>
+            <input 
+                type='text' 
+                name="name" 
+                placeholder={labelName}
+                value={formData.name}
+                onChange={handleName}
+            />
+                
+        </div>
+
+
+        <div>
+            <label htmlFor="lastName">{labelLastName}</label>
+            <input 
+                type='text' 
+                name="lastName" 
+                placeholder={labelLastName}
+                value={formData.lastname}
+                onChange={handleLastname}
+            />
+                
+        </div>
+
+
+        <div>
+            <label htmlFor="email">Your email:</label>
+            <input 
+                type='email' 
+                name="email" 
+                placeholder='Your email'
+                value={formData.email}
+                onChange={handleEmail}
+            />
+                
+        </div>
+
+
+        <div>
+            <label htmlFor="message">{labelMessage}</label>
+            <textarea 
+                name='message' 
+                cols='30' 
+                rows='5'
+                placeholder={labelMessage}
+                value={formData.message}
+                onChange={handleMessage}
+            >
+            
+        </div>
+
+
+        <div className="succesMessage">Message have been send</div>
+
+
+        <button 
+        type="surbmit"
+        onClick={formSubmit}
+        >Send</button>
+    </form>
+
+        
+</body>
+</html>

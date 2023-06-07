@@ -1,0 +1,243 @@
+#fixedHeader {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#mainHeader {
+    background-color: black;
+    box-shadow: 0 0 1em 1em black;
+
+    position: relative;
+    z-index: 10;
+
+    justify-content: space-between;
+    padding-right: 2em;
+}
+
+/* Delfos Logo */
+
+#logo {
+    max-width: 120px;
+    padding: 1em 1em .5em .5em;
+    cursor: pointer;
+
+}
+
+/* Navigation Bar */
+
+nav {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Lenguage Selector */
+
+select {
+    background-color: black;
+    color: white;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+
+}
+
+/* Phone Button */
+
+#buttonPhonelink {
+    all: initial;
+    background-image: url("./Images/phone.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    margin: auto;
+
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+}
+
+/* Drop down */
+
+    .contactDropDown {
+        color: white;
+        position: absolute;
+        font-size: 1.3em;
+        background-color: black;
+        padding: 1em;
+        top: 60px;
+        left: 0px;
+        width: 100%;
+        transition: height 400ms linear;
+        box-sizing: border-box;
+    }
+
+    .contactDropDownHide {
+        display: none;
+        position: absolute;
+        color: transparent;
+        pointer-events: none;
+        height: 0;
+        transition: height 400ms linear;
+    }
+
+/* In Dropdown */
+
+    #phoneNumber {
+        margin-bottom: 0.5em;
+    }
+
+    #ubiIcon {
+        width: 20px;
+        margin-left: -2px;
+        margin-right: 0.5em;
+    }
+
+    #innerphoneIcon {
+        display: inline;
+        width: 15px;
+        margin-right: 0.5em;
+    }
+
+/* Email Contact Form */
+
+    #emailIcon {
+        width: 40px;
+        height: 40px;
+        background-image: url("./Images/emailIcon.png");
+        background-size: cover;
+        margin: auto;
+        cursor: pointer;
+
+    }
+
+/* Hamburger Menu*/
+
+    #MenuContainer {
+        margin-left: 0.7em;
+    }
+    .menu > * {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-size: 1.3em;
+        cursor: pointer;
+
+    }
+
+
+/* Media queries */
+
+/* Bigger than smallest phone */
+
+@media screen and (min-width:321px) {
+    #logo {
+        padding-left: 1em;
+    }
+    .contactDropDown{
+        margin-top: -2px;
+    }
+
+}
+
+/* Tablests */
+
+@media screen and (min-width:426) {
+    .contactDropDown{
+        margin-top: -100%;
+    }
+}
+
+
+@media screen and (min-width:481px) and (max-width:769px) {
+    #mainHeader {
+        justify-content: space-evenly;
+    }
+}
+
+/* Small screens */
+
+@media screen and (min-width:769px) {
+    #mainHeader {
+        padding-right: 1em;
+    }
+    nav {
+        margin-left: min(2em, 3%);
+        max-width: 200px;
+    }
+    .menu {
+        font-size: min(1em, 1.6vw);
+        display: flex;
+        justify-content: end;
+
+    }
+    #MenuContainer {
+        width: 80%;
+        height: 100%;
+    }
+    .menu_li {
+        width: max-content;
+        align-self: last baseline;
+        margin-inline: 1em;
+    }
+
+        .menu_li {
+            background: linear-gradient(currentColor 0 0) 
+              bottom left/
+              var(--underline-width, 0%) 0.1em
+              no-repeat;
+            padding-bottom: .3em;
+            color: white;
+            transition: background-size 0.5s;
+          }
+          
+          .menu_li:hover {
+            --underline-width: 100%;
+          }
+        
+
+}
+
+/* Normal screens */
+
+@media screen and (min-width:1025px) {
+    #logo {
+        max-width: 160px;
+        padding-left: 2em;
+    }
+    #lenguageSelector{
+        width:  50px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+
+/* Big Screens */
+
+@media screen and (min-width:1441px) {
+    #logo {
+        max-width: 180px;
+    }
+
+    .contactDropDown{
+        margin-top: 10px;
+    }
+    .menu_li {
+        margin-inline: 2em;
+    }
+
+
+}
+
+/* 2K and bigger */
+
+@media screen and (min-width:1440px) {
+    #lenguageSelector{
+        font-size: 18px;
+    }
+}

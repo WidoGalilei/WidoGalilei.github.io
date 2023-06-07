@@ -1,0 +1,176 @@
+/* Footer */
+
+    .center_flexbox {
+        display: flex;
+        justify-content: center;
+    }
+
+    #followUs,
+    #ContactFooterLink
+    {
+        text-align: center;
+    }
+
+
+    footer {
+        background-color: black;
+        color: white;
+        box-sizing: border-box;
+        padding-bottom: 3em;
+    }
+
+
+/* Resrvation Button */
+
+    #resButton {
+        width: 100%;
+        height: 70px;
+
+        position: sticky;
+        bottom: 0;
+        left: 0;
+
+        background-image: linear-gradient(120deg, #00c1e7 0%, #090979 50%, #00c1e7 100%);
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        transition: all .5s;
+    }
+
+
+/* Horarios */
+    ul {
+        list-style-type: none;
+    }
+    #horarios {
+        box-sizing: border-box;
+        padding: 2em;
+    }
+
+    #Horario_Restaurante,
+    #Horario_Recepcion {
+        margin: 1em 0 2em 0;
+    }
+
+    #Time_Recepcion_header,
+    #Time_Restaurant_header,
+    #center_check_in,
+    #center_check_out {
+        font-size: inherit;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    #center_check_in {
+        margin-top: 1.5em;
+    }
+
+    .center_days{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #separador{
+        display: none;
+    }
+
+/* Scocial Media Links */
+
+        #followUs {
+            padding-top: 2em;
+        }
+
+        #facebookLink {
+            background-image: url('./Images/FacebookLogo.png');
+        }
+
+        #instagramLink {
+            background-image: url('./Images/Instagram_icon.png.webp');
+
+        }
+        .socialMedia {
+            background-size: cover;
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            margin: 2em 2em;
+            transform: scale(1);
+            transition: all 1s;
+
+        }
+
+        .socialMedia:hover,
+        #ContactFooterLink:hover {
+            transform: scale(1.2);
+        }
+
+        #ContactFooterLink {
+            width: max-content;
+            display: block;
+            font-size: 1.1em;
+            margin:  auto;
+            padding: .5em ;
+            transition: all 1s;
+
+        }
+
+
+
+
+@media screen and (min-width:375px) {
+    .center_days{
+        max-width: 250px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:700px) {
+    #separador{
+        width: 2px;
+        height: auto;
+        background-color: aliceblue;
+        opacity: .4;
+        padding: 0;
+        margin-top: 1em;
+        display: block;
+    }
+    #horarios{
+        display: flex;
+        justify-content: center;
+    }
+    #Horario_Restaurante,
+    #Horario_Recepcion {
+        margin: 2em;
+        width: 360px;
+    }
+}
+
+@media screen and (min-width:769px) {
+    /* #resButton {
+        height: 70px;
+    } */
+    #resButton {
+        background-image: linear-gradient(120deg, #00c1e7 20%, #090979 50%, #00c1e7 80%);
+
+    }
+    .socialMedia {
+        width: 55px;
+        height: 55px;
+    }
+    #separador{
+        /* margin-inline: 3em; */
+    }
+
+    #resButton:hover {
+        font-size:130% ;
+        background-color: rgb(193, 211, 32);
+        box-shadow: 0 0 15px 3px black;
+        background-image: linear-gradient(120deg,#14618d 0%, #29dbff 25%, #14148d 50%, #29dbff 75%, #14618d 100%);
+        color: beige;
+        border-radius: 35px;
+
+    }
+
+}

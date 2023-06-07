@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+#mainApartmentContainer {
+    background-color: black;
+}
+
+/* Main Logo IMG */
+
+#LogoImg {
+    background-color: black;
+    padding: 2em;
+    max-width: 280px;
+}
+
+@media (max-width: 400px) {
+    #LogoImg {
+        width: 100%;
+        padding: 2em;
+    }
+
+}
+
+/* Main header intoduction */
+
+#mainTittle {
+    padding: 1em 0;
+    background-color: aqua;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Main container of all appartments */
+
+.appartments,
+.back-G-color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.back-G-color {
+    margin: 0;
+}
+/* Each appartment main container // GRID */
+
+.picContainer {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* Appartments */
+
+.back-G-color > * {
+    margin: 2em 0;
+}
+
+.pictures {
+    width: 100%;
+    height: min-content;
+    border-radius: 1em;
+    border: 5px solid black;
+}
+
+.appTitle {
+    width: 100vw;
+    box-shadow: black 0 0 0.5em 0.2em;
+}
+.appTitle,
+.text {
+    background-color: beige;
+    border-radius: 15px;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.itemList {
+    display: flex;
+    align-items: start;
+}
+
+.inner-item-List {
+    width: 50%;
+    margin: 2em;
+}
+
+/* 1 */
+
+#app1 {
+    background-color: rgb(121, 111, 255);
+}
+
+#app1 h2,
+#app1 p,
+#app1 #itemList1 {
+    background-color: rgb(189, 185, 250);
+}
+
+/* 2 */
+
+#app2 {
+    background-color: rgb(97, 204, 102);
+}
+
+#app2 h2,
+#app2 p,
+#app2 #itemList2 {
+    background-color: rgb(143, 248, 148);
+}
+
+/* 3 */
+
+#app3 {
+    background-color: rgb(233, 200, 14);
+}
+
+#app3 h2,
+#app3 p,
+#app3 #itemList3 {
+    background-color: rgb(253, 230, 95);
+}
+
+/* RESERVATION BUTTONS */
+
+.resvButton {
+    width: 150px;
+    height: 40px;
+
+    background-color: aqua;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resvButton:hover {
+    transform: scale(1.1);
+}
+
+a:link,
+a:visited {
+    color: #000;
+}
+
+/* MEDIA */
+
+@media (min-width: 767px) {
+    .picContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-col-span2 {
+        grid-column: span 2;
+    }
+    .grid-row-span2 {
+        grid-row: span 2;
+    }
+    .resvButton {
+        transform: scale(1.1);
+    }
+    .back-G-color {
+        width: 80%;
+    }
+    #app1 div {
+        background-color: rgb(77, 66, 226);
+    }
+    #app2 div {
+        background-color: rgb(53, 146, 58);
+    }
+    #app3 div {
+        background-color: rgb(197, 169, 11);
+    }
+}
+
+@media (min-width: 1024px) {
+    .picContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text,
+    .picContainer {
+        width: 808px;
+    }
+    .resvButton {
+        margin: 2em 0;
+    }
+}

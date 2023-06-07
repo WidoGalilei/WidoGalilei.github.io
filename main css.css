@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+  }
+
+
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+
+  
+  a:link, a:visited {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .centerWithFlexbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .spacerTopBottom {
+    margin: 1em 0 1em 0;
+  }
+
+  .text_for_now {
+    margin: 2em;
+  }
+  
