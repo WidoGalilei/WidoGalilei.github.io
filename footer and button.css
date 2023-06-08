@@ -24,19 +24,21 @@
 
     #resButton {
         width: 100%;
-        height: 70px;
+        height: 8vh;
+        min-height: max-content;
+        max-height: 70px;
 
         position: sticky;
         bottom: 0;
-        left: 0;
+        /* left: 0; */
 
         background-image: linear-gradient(120deg, #00c1e7 0%, #090979 50%, #00c1e7 100%);
 
+        font-size: calc(1em + 1vh);
 
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.5em;
         transition: all .5s;
     }
 

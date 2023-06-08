@@ -122,6 +122,17 @@
 
     /* Concert Section 
         Horizontal concert pictures animation and text*/
+        
+        @media screen and (min-width: 769px) {
+            .startLeft {
+                transform: translateX(-100%);
+            }
+        
+            .startRight {
+                transform: translateX(+100%);
+            }
+            
+        }
 
         #concertSection {
             overflow: hidden;
@@ -146,14 +157,7 @@
             filter: blur(5px);
         }
 
-        .startLeft {
-            transform: translateX(-100%);
-        }
 
-        .startRight {
-            transform: translateX(+100%);
-        }
-        
         .horizontalAnimation{
             opacity: 1;
             transform: translateX(0);
@@ -222,6 +226,8 @@
     }
 
 }
+
+
 
 /* Small screens */
 
