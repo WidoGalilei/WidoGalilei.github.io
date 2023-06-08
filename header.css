@@ -6,7 +6,7 @@
 
 #mainHeader {
     background-color: black;
-    box-shadow: 0 0 1em 1em black;
+    box-shadow: 0 0 9px 3px rgb(0, 0, 0);
 
     position: relative;
     z-index: 10;

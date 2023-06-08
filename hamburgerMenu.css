@@ -56,7 +56,7 @@
     transform: rotate(-405deg);
 }
 
-@media (max-width: 769px) {
+@media (max-width: 769px) or (max-height: 500px){
     .menu-button-container {
         display: flex;
     }
@@ -100,3 +100,8 @@
     }
 }
 
+/* @media (max-width: 769px) or  {
+    *{
+        background-color: aquamarine;
+    }
+} */

@@ -71,9 +71,12 @@
 .appTitle,
 .text {
     background-color: beige;
-    border-radius: 15px;
     padding: 0.5em;
     text-align: center;
+}
+.text {
+    border-radius: 15px;
+
 }
 
 .itemList {
@@ -136,9 +139,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: all 1s;
+
 }
 .resvButton:hover {
-    transform: scale(1.1);
+    /* color: grey;
+    background-color: rgb(187, 216, 25); */
 }
 
 a:link,

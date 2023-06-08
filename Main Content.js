@@ -109,7 +109,7 @@
 
     const art_img = document.querySelector('#paintingsPicture')
 
-    function myFunction(media_q_769) {
+    function check_width(media_q_769) {
         if (media_q_769.matches) { 
             swapElements(art_text, art_img)
         } else {
@@ -118,5 +118,9 @@
       }
       
       var media_q_769 = window.matchMedia("(min-width: 769px)")
-      myFunction(media_q_769)
-      media_q_769.addEventListener("change", myFunction) 
+
+      if (media_q_769.matches) {
+        check_width(media_q_769)
+      }
+      media_q_769.addEventListener("change", check_width) 
+
