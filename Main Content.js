@@ -50,6 +50,14 @@
             }
         }
 
+                
+            // set a timer of 10 sec 
+            setInterval(Lang_Font, 10000)
+
+            // run it once at page opening
+                Lang_Font()
+
+
 
     //Horizontal animation off concert pictures
 
@@ -57,8 +65,11 @@
             entries.forEach((entry) => {
 
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('horizontalAnimation')
+                    setTimeout(() => {
+                        entry.target.classList.add('horizontalAnimation')}, 400)
                 }
+
+
                 // else {
                 //     entry.target.classList.remove('horizontalAnimation')
                 // }
@@ -71,12 +82,6 @@
 
 
 
-
-    // set a timer of 10 sec 
-        setInterval(Lang_Font, 10000)
-
-    // run it once at page opening
-        Lang_Font()
 
 
 

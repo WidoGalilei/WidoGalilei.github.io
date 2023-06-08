@@ -1,3 +1,18 @@
+/* Hamburger Menu*/
+
+#MenuContainer {
+    margin-left: 0.7em;
+}
+.menu > * {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    cursor: pointer;
+
+}
+
+
 .menu > li {
     overflow: hidden;
 }
@@ -56,7 +71,7 @@
     transform: rotate(-405deg);
 }
 
-@media (max-width: 769px) or (max-height: 500px){
+@media (max-width: 769px) or (max-height: 600px){
     .menu-button-container {
         display: flex;
     }
@@ -105,4 +120,46 @@
         transition-delay: .5s;
 
     }
+}
+
+@media (min-width: 769px) and (min-height: 600px){
+
+        #mainHeader {
+            padding-right: 1em;
+        }
+        nav {
+            margin-left: min(2em, 3%);
+            max-width: 200px;
+        }
+        .menu {
+            font-size: min(1em, 1.6vw);
+            display: flex;
+            justify-content: end;
+    
+        }
+        #MenuContainer {
+            width: 80%;
+            height: 100%;
+        }
+        .menu_li {
+            width: max-content;
+            align-self: last baseline;
+            margin-inline: 1em;
+        }
+    
+            .menu_li {
+                background: linear-gradient(currentColor 0 0) 
+                  bottom left/
+                  var(--underline-width, 0%) 0.1em
+                  no-repeat;
+                padding-bottom: .3em;
+                color: white;
+                transition: background-size 0.5s;
+              }
+              
+              .menu_li:hover {
+                --underline-width: 100%;
+              }
+    
+    
 }

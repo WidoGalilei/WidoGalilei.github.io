@@ -27,11 +27,6 @@
         height: 8vh;
         min-height: max-content;
         max-height: 70px;
-
-        position: sticky;
-        bottom: 0;
-        /* left: 0; */
-
         background-image: linear-gradient(120deg, #00c1e7 0%, #090979 50%, #00c1e7 100%);
 
         font-size: calc(1em + 1vh);
@@ -150,12 +145,9 @@
 }
 
 @media screen and (min-width:769px) {
-    /* #resButton {
-        height: 70px;
-    } */
+
     #resButton {
         background-image: linear-gradient(120deg, #00c1e7 20%, #090979 50%, #00c1e7 80%);
-
     }
     .socialMedia {
         width: 55px;
