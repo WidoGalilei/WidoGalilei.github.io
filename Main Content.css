@@ -17,7 +17,7 @@
 
     #MainTextContainer {
         font-size: 18px;
-        padding-top: 1em;
+        padding-top: calc(2em + 2vw);
         line-height: 1.6;
     }
 

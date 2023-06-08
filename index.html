@@ -28,26 +28,26 @@
 
     <!-- Header/Navigation bar -->
     <div  id="fixedHeader">
-    <div>
-        <div id="mainHeader" class="centerWithFlexbox">
+
+        <nav>
             
             <!--Delfos Logo -->
 
-                <img src= './Images/Logo.png ' alt="Delfos Logo" id="logo"
-                onclick="location.reload(true)"
-                ></img>
+            <img src= './Images/Logo.png ' alt="Delfos Logo" id="logo"
+                onclick="location.reload(true)">
+            </img>
 
             <!-- Navigation Bar -->
+            <div id="mainHeader">
 
-            <nav>
 
                 <!-- Lenguage Selector -->
 
                     <select
                         id="lenguageSelector"
                         name='lenguages'
-                        onchange="window.location.hash=this.value, location.reload(true)"
-                    >
+                        onchange="window.location.hash=this.value, location.reload(true)">
+
                         <option value='' id="ES">ES</option>
                         <option value='EN' id="EN">EN</option>
                         <option value='DE' id="DE">DE</option>
@@ -72,33 +72,31 @@
                 <!-- Email Icon with contact FORM -->
 
                     <a href="mailto:abc@example.com" id="emailIcon"></a>
+            </div>
+            
+            <!-- Hamburger/Menu -->
 
+            <div id="MenuContainer">
 
-            </nav>
-                            <!-- Hamburger/Menu -->
-
-                            <div id="MenuContainer">
-
-                                <input id="menu-toggle" type="checkbox" />
+                <input id="menu-toggle" type="checkbox" />
                                         
+                <label class='menu-button-container' for="menu-toggle">
         
-                                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
         
-                                    <div class='menu-button'></div>
+                </label>
         
-                                </label>
-        
-                                <ul class="menu" id="menu_ID">
-                                    <li class="menu_li"><a  id="booking" href="https://www.tripadvisor.es/Search?q=Apartamento%20Rural%20Delfos%20del%20Faz&searchSessionId=270C717AFDDB1AE35ECA4A4233827D521676219252503ssid&searchNearby=false&geo=580270&sid=A11AC3F1DFA54357B5719F80A0A33B251676219282246&blockRedirect=true&rf=1" ></a></li>
-                                    <li class="menu_li" id="rooms"></li>
-                                    <li class="menu_li" id="food"></li>
-                                    
-                                    <!-- <li class="menu_li"><a  href='./galeria' id="galeria"></a></li>
-                                    <li class="menu_li"><a  href='./live' id="live"></a></li> -->
-                                </ul>
-        
-                            </div>
-        </div>
+                <ul class="menu" id="menu_ID">
+                    <li class="menu_li"><a  id="booking" href="https://www.tripadvisor.es/Search?q=Apartamento%20Rural%20Delfos%20del%20Faz&searchSessionId=270C717AFDDB1AE35ECA4A4233827D521676219252503ssid&searchNearby=false&geo=580270&sid=A11AC3F1DFA54357B5719F80A0A33B251676219282246&blockRedirect=true&rf=1" ></a></li>
+                    <li class="menu_li" id="rooms"></li>
+                    <li class="menu_li" id="food"></li>
+                    
+                    <!-- <li class="menu_li"><a  href='./galeria' id="galeria"></a></li>
+                    <li class="menu_li"><a  href='./live' id="live"></a></li> -->
+                </ul>
+            </div>
+
+        </nav>
     </div>
 
     <!-- Main Content -->
@@ -322,7 +320,7 @@
             
 
         
-    </div>
+
 
     <script src="Header and All Text transaltions.js"></script>
     <script src="Main Content.js"></script>

@@ -1,32 +1,41 @@
-#fixedHeader {
+/* #fixedHeader {
     position: sticky;
-    top: 0;
+    top: 10px;
     z-index: 100;
+    width: 100%;
+} */
+
+
+#logo,
+select,
+#phoneNumber a
+ {
+    cursor: pointer;
 }
 
-#mainHeader {
+nav {
+    display: flex;
+    align-items: center;
     background-color: black;
     box-shadow: 0 0 9px 3px rgb(0, 0, 0);
 
     position: relative;
-    z-index: 10;
+    padding-right: 1em;
+    justify-content: space-around;
 
-    justify-content: space-between;
-    padding-right: 2em;
 }
+
 
 /* Delfos Logo */
 
 #logo {
     max-width: 120px;
-    padding: 1em 1em .5em .5em;
-    cursor: pointer;
-
+    padding: 1em 1em .5em;
 }
 
 /* Navigation Bar */
 
-nav {
+#mainHeader {
     width: 55%;
     height: 100%;
     display: flex;
@@ -40,68 +49,75 @@ select {
     color: white;
     border: none;
     margin: auto;
-    cursor: pointer;
-
 }
+select:hover {
+    box-shadow: 0 0  20px 1px rgb(128, 128, 128);
+    border-radius: 5px;
+}
+
 
 /* Phone Button */
 
 #buttonPhonelink {
     all: initial;
+
     background-image: url("./Images/phone.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-position-y: 50%;
     margin: auto;
+    cursor: pointer;
 
     width: 40px;
     height: 40px;
-    cursor: pointer;
-
 }
 
-/* Drop down */
 
-    .contactDropDown {
-        color: white;
-        position: absolute;
-        font-size: 1.3em;
-        background-color: black;
-        padding: 1em;
-        top: 60px;
-        left: 0px;
-        width: 100%;
-        transition: height 400ms linear;
-        box-sizing: border-box;
-    }
+    /* Drop down */
 
-    .contactDropDownHide {
-        display: none;
-        position: absolute;
-        color: transparent;
-        pointer-events: none;
-        height: 0;
-        transition: height 400ms linear;
-    }
+        .contactDropDown {
+            color: white;
+            position: absolute;
+            font-size: 1.3em;
+            background-color: black;
+            padding: 1.5em 2em;
+            top: 60px;
+            left: 0px;
+            width: 100%;
+            transition: height 400ms linear;
+            box-sizing: border-box;
+            margin-top: -2px;
+            z-index: 2;
+        }
 
-/* In Dropdown */
+        .contactDropDownHide {
+            display: none;
+            position: absolute;
+            color: transparent;
+            pointer-events: none;
+            height: 0;
+            transition: height 400ms linear;
 
-    #phoneNumber {
-        margin-bottom: 0.5em;
-    }
+        }
 
-    #ubiIcon {
-        width: 20px;
-        margin-left: -2px;
-        margin-right: 0.5em;
-    }
+        /* In Dropdown */
 
-    #innerphoneIcon {
-        display: inline;
-        width: 15px;
-        margin-right: 0.5em;
-    }
+            #phoneNumber {
+                margin-bottom: 0.5em;
+            }
+
+            #ubiIcon {
+                width: 20px;
+                margin-left: -2px;
+                margin-right: 0.5em;
+            }
+
+            #innerphoneIcon {
+                display: inline;
+                width: 15px;
+                margin-right: 0.5em;
+            }
 
 /* Email Contact Form */
 
@@ -111,25 +127,14 @@ select {
         background-image: url("./Images/emailIcon.png");
         background-size: cover;
         margin: auto;
-        cursor: pointer;
-
     }
 
-
+#buttonPhonelink:hover,
+#emailIcon:hover {
+    transform: scale(1.2);
+}
 
 /* Media queries */
-
-/* Bigger than smallest phone */
-
-@media screen and (min-width:321px) {
-    #logo {
-        padding-left: 1em;
-    }
-    .contactDropDown{
-        margin-top: -2px;
-    }
-
-}
 
 /* Tablests */
 
@@ -188,3 +193,20 @@ select {
         font-size: 18px;
     }
 }
+
+#fixedHeader {
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+  }
+  #fixedHeader.move_top {
+    position: fixed;
+    transform: translateY(-100px);
+  }
+  #fixedHeader.fade_in { 
+    display: block;
+    transition: all 1.4s ease-in;
+    transform: translateY(0px);
+
+   }
+

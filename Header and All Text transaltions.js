@@ -1,18 +1,43 @@
 
-    // document.querySelector()
-    
-    
+
+let scrollpos = window.scrollY
+const header = document.querySelector("#fixedHeader")
+const header_height = header.offsetHeight
+
+
+const add_class_on_scroll = (className) => header.classList.add(className)
+const remove_class_on_scroll = (className) => header.classList.remove(className)
+
+window.addEventListener('scroll', function() { 
+  scrollpos = window.scrollY;
+
+    if (scrollpos >= 70) { 
+        add_class_on_scroll("move_top") }
+    if (scrollpos >= 500) { 
+        add_class_on_scroll("fade_in") }
+    if (scrollpos < 70 && header.classList.contains('fade_in') === false) { 
+        remove_class_on_scroll("fade_in")
+        remove_class_on_scroll("move_top") 
+    }
+    if (scrollpos <= 1) { 
+        remove_class_on_scroll("fade_in")
+        remove_class_on_scroll("move_top") 
+    }
+})
+
     // Contact information toggle
 
         const contactInfo = document.querySelector('#showContact')
+        const phone_butt = document.querySelector("#buttonPhonelink")
 
         function toggleContactInfo() {
 
             contactInfo.classList.toggle('contactDropDown')
             contactInfo.classList.toggle('contactDropDownHide')
+
         }
 
-        document.querySelector("#buttonPhonelink").addEventListener('click', toggleContactInfo)
+        phone_butt.addEventListener('click', toggleContactInfo)
 
 
     // Change lenguage of content and buttons
