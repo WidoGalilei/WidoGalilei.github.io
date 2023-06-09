@@ -115,16 +115,7 @@
     /* Concert Section 
         Horizontal concert pictures animation and text*/
 
-        @media screen and (min-width: 769px) {
-            .startLeft {
-                transform: translateX(-100%);
-            }
-        
-            .startRight {
-                transform: translateX(+100%);
-            }
-            
-        }
+
 
         #concertSection {
             overflow: hidden;
@@ -229,8 +220,16 @@
 
 /* Small screens */
 
-@media screen and (min-width:769px) {
+@media screen and (min-width:769px)and (min-height: 600px) {
 
+    .startLeft {
+        transform: translateX(-100%);
+    }
+        
+    .startRight {
+        transform: translateX(+100%);
+    }
+            
     #miniMap {
         max-height: 450px;
         max-width: 700px;
@@ -291,6 +290,7 @@
 @media screen and (min-width:1700px) {
 
 }
+
 
 
 /* Phone on the side */
