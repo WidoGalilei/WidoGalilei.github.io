@@ -71,6 +71,10 @@
     transform: rotate(-405deg);
 }
 
+
+
+/* Phone on the side */
+
 @media (max-width: 769px) or (max-height: 600px){
     .menu-button-container {
         display: flex;
@@ -121,6 +125,8 @@
 
     }
 }
+
+
 
 @media (min-width: 769px) and (min-height: 600px){
 

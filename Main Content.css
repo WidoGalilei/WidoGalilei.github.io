@@ -17,7 +17,6 @@
 
     #MainTextContainer {
         font-size: 18px;
-        padding-top: calc(2em + 2vw);
         line-height: 1.6;
     }
 
@@ -25,8 +24,9 @@
 
         #wellcomeLetterContainer{
             width: 100%;
-            height: 15vh;
-            max-height: 200px;
+            height: clamp(100px, 15vh, 150px) ;
+            /* min */
+            /* max-height: 200px; */
         }
 
 
@@ -99,9 +99,7 @@
 
         #section1{
             background-color: rgb(247, 241, 227);
-            margin-top: 1.5em;
             background-image: linear-gradient(180deg, var(--blue-backg) 0%, var(--grey-backg)50%);
-
         }
 
         #section1 > * {
@@ -135,6 +133,8 @@
             padding: 1em;
             background-image: radial-gradient(ellipse at top, var(--blue-backg),transparent ),
                               radial-gradient(ellipse at bottom, #580c9f, transparent);
+                              position: relative;
+        
         }
         
 
@@ -156,7 +156,7 @@
             opacity: 1;
             transform: translateX(0);
             filter: blur(0);
-            transition: all 2s;
+            transition: all 2s ease-out;
         }
         .back_color_concert{
             width: 100%;
@@ -167,6 +167,8 @@
     /* Art section */
 
         #artSection {
+            position: relative;
+            top:-5px;
             padding: 1em;
             background-color: var(--green-backg);
 
@@ -287,5 +289,21 @@
 /* 2K and bigger */
 
 @media screen and (min-width:1700px) {
+
+}
+
+
+/* Phone on the side */
+@media screen and (max-height: 600px) {
+    #poolPicture,
+    .liveMusicPics,
+    #paintingsPicture,
+    #miniMap {
+        max-height: 90Vh;
+        width: unset;
+    }
+    #miniMap {
+        width: 70vw;
+    }
 
 }

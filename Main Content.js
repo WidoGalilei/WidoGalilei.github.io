@@ -66,7 +66,7 @@
 
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                        entry.target.classList.add('horizontalAnimation')}, 400)
+                        entry.target.classList.add('horizontalAnimation')}, 1000)
                 }
 
 

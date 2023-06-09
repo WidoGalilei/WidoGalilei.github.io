@@ -207,3 +207,26 @@
 
 }
 
+/* Phone on the side */
+
+    @media screen and (max-height: 600px) {
+        .wraper_acordeon {
+            min-height: 325px;
+            max-height: 90vh;
+        }
+        #house_pic, #mountain {
+            left: 0;
+        }
+    }
+
+    @media screen and (max-height: 600px) and (max-width:769px) {
+        .show_picture {
+            left: 40%;
+            transform: translate(-50%, 0);
+            width: unset;
+            min-width: max-content;
+            max-height:90vh;
+            min-height: 250px;
+        }
+
+    }

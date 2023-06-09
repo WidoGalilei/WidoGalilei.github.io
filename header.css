@@ -194,19 +194,27 @@ select:hover {
     }
 }
 
-#fixedHeader {
-    width: 100%;
-    z-index: 100;
-    position: absolute;
-  }
-  #fixedHeader.move_top {
-    position: fixed;
-    transform: translateY(-100px);
-  }
-  #fixedHeader.fade_in { 
-    display: block;
-    transition: all 1.4s ease-in;
-    transform: translateY(0px);
 
-   }
+/* Phone on the side */
+
+@media  (min-height: 600px) {
+    #fixedHeader {
+        width: 100%;
+        z-index: 100;
+        position: absolute;
+      }
+      #fixedHeader.move_top {
+        position: fixed;
+        transform: translateY(-100px);
+      }
+      #fixedHeader.fade_in { 
+        display: block;
+        transition: all 1.4s ease-in;
+        transform: translateY(0px);
+    
+       }
+    #MainTextContainer{
+       padding-top: calc(2em + 2vw);
+    }
+}
 
