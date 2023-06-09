@@ -114,7 +114,16 @@
 
     /* Concert Section 
         Horizontal concert pictures animation and text*/
+        @media screen and (min-width:769px)and (min-height: 600px) {
 
+            .startLeft {
+                transform: translateX(-100%);
+            }
+                
+            .startRight {
+                transform: translateX(+100%);
+            }
+        }        
 
 
         #concertSection {
