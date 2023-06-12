@@ -14,9 +14,33 @@
 
                 })
         });
-    
 
-// Text and information
+
+
+        // Custom media @media to move show inner picture in acordeon to the left so it stay centered when responsive
+
+            window.addEventListener('resize',() => {
+                let width = screen.width;
+                let height = screen.height;
+                const show_picture = document.querySelector('.show_picture img')
+
+
+                if (width >= 769 && width <= 1220 && height >=300 && height <= 570) {
+
+                    show_picture.style.position= "relative";
+
+                    const move_pic_left = ((width - 1200)/2)/10 + ((700 - height)/2)/10
+
+                    if (move_pic_left < 0) {
+
+                        show_picture.style.left= `${move_pic_left}%`
+                        
+                    } 
+                    } else {
+                        show_picture.style.left= "0"
+                    }
+            })
+
 
     // Wellcome spin and change letters-leanguage
 

@@ -28,7 +28,7 @@ window.addEventListener('scroll', function() {
     // Contact information toggle
 
         const contactInfo = document.querySelector('#showContact')
-        const phone_butt = document.querySelector("#buttonPhonelink")
+        const phone_butt = document.querySelector(".buttonPhonelink")
 
         function toggleContactInfo() {
 

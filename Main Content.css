@@ -18,15 +18,14 @@
     #MainTextContainer {
         font-size: 18px;
         line-height: 1.6;
+        padding-top: 3em;
     }
 
     /* Welcome text Animation changer*/
 
         #wellcomeLetterContainer{
             width: 100%;
-            height: clamp(100px, 15vh, 150px) ;
-            /* min */
-            /* max-height: 200px; */
+            height: 150px;
         }
 
 
@@ -215,6 +214,7 @@
 /* Tablests */
 
 @media screen and (min-width:426px) {
+
     #miniMap {
         height: 50vw ;
     }
@@ -288,8 +288,17 @@
 
 /* 2K and bigger */
 
-@media screen and (min-width:1700px) {
-
+@media screen and (min-width:2000px) {
+    /* #text1,
+    #text2,
+    #concertText,
+    #artText,
+    #mapText {
+        font-size:1.5em;
+    } */
+    .img_max_width_800 {
+        max-width: 1000px ;
+    }
 }
 
 
@@ -301,8 +310,9 @@
     #paintingsPicture,
     #miniMap {
         max-height: 90Vh;
-        width: unset;
     }
+
+
     #miniMap {
         width: 70vw;
     }
