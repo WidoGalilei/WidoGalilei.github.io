@@ -38,8 +38,6 @@ window.addEventListener('scroll', function() {
             contactInfo.classList.toggle('contactDropDownHide')
 
             phone_head.classList.toggle('active_movement_phone')
-
-
         }
 
         phone_butt.addEventListener('click', toggleContactInfo)

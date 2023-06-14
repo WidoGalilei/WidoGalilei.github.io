@@ -20,7 +20,8 @@ nav {
     box-shadow: 0 0 9px 3px rgb(0, 0, 0);
 
     position: relative;
-    padding-right: 1em;
+    padding: 1em 1em .5em .5em;
+
     justify-content: space-around;
 
 }
@@ -29,15 +30,14 @@ nav {
 /* Delfos Logo */
 
 #logo {
-    max-width: 120px;
-    padding: 1em 1em .5em;
+    max-width: 110px;
+    margin-right: .5em;
 }
 
 /* Navigation Bar */
 
 #mainHeader {
     width: 55%;
-    height: 100%;
     display: flex;
     justify-content: space-evenly;
 }
@@ -85,7 +85,7 @@ nav {
 
 
     .active_movement_phone {
-        transform: rotate(-120deg) scale(0.9) translateY(6px) ;
+        transform: rotate(-120deg) scale(0.9) translateY(8px) ;
         transform-origin: bottom left;
     }
 
@@ -151,19 +151,26 @@ nav {
 
 
 @media screen and (min-width:426) {
-    .contactDropDown{
-        margin-top: -100%;
-    }
-
-
     #mainHeader {
         justify-content: space-evenly;
     }
 
 }
 
-@media screen and (min-width:769px) {
-    
+@media screen and (min-width:769px) and (min-height: 600px) {
+    .buttonPhonelink:hover {
+        transform: scale(1.2);
+        transition: transform  1s;
+
+    }
+    .buttonPhonelink:has(.active_movement_phone) {
+        transform: scale(1.2);
+
+    }
+    #emailIcon:hover{
+        transform: scale(1.3);
+
+    }
 
 }
 /* Normal screens */
@@ -177,15 +184,10 @@ nav {
         font-size: 16px;
     }
 
-    #emailIcon:hover{
-        transform: scale(1.3);
-    }
-    .buttonPhonelink:hover {
-        transform: scale(1.2);
-    }
-    .buttonPhonelink:has(.active_movement_phone) {
-        transform: scale(1.2);
-    }
+
+
+    
+
 }
 
 
