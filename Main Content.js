@@ -83,7 +83,7 @@
 
 
 
-    //Horizontal animation off concert pictures
+    //Horizontal animation of pictures
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -134,22 +134,27 @@
         prev2.after(el1);
     }
 
-    const art_text = document.querySelector('#art_text-container')
+    const art_text = document.querySelector('#art_text-container');
+    const art_img = document.querySelector('#paintingsPicture');
 
-    const art_img = document.querySelector('#paintingsPicture')
+    let media_q_width_769px = window.matchMedia("(min-width: 769px)");
+    let media_q_height_600px = window.matchMedia("(min-height: 600px)");
 
-    function check_width(media_q_769) {
-        if (media_q_769.matches) { 
+    let big_screnn = false;
+
+
+    function check_width() {
+        if (media_q_width_769px.matches && media_q_height_600px.matches) { 
             swapElements(art_text, art_img)
+            big_screnn = true
         } else {
-            swapElements(art_img,art_text)
+            if (big_screnn) {
+                swapElements(art_text, art_img);
+                big_screnn = false;
+            }
         }
       }
       
-      var media_q_769 = window.matchMedia("(min-width: 769px)")
+        media_q_width_769px.addEventListener("change", check_width) 
 
-      if (media_q_769.matches) {
-        check_width(media_q_769)
-      }
-      media_q_769.addEventListener("change", check_width) 
-
+        check_width()
