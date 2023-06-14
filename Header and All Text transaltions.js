@@ -29,11 +29,16 @@ window.addEventListener('scroll', function() {
 
         const contactInfo = document.querySelector('#showContact')
         const phone_butt = document.querySelector(".buttonPhonelink")
+        const phone_head = document.querySelector("#top_phone_movement")
+
 
         function toggleContactInfo() {
 
             contactInfo.classList.toggle('contactDropDown')
             contactInfo.classList.toggle('contactDropDownHide')
+
+            phone_head.classList.toggle('active_movement_phone')
+
 
         }
 
